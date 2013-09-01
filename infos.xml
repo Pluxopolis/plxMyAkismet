@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+	<title><![CDATA[MyAkismet]]></title>
+	<author><![CDATA[Stéphane F.]]></author>
+	<version>1.1.2</version>
+	<date>16/04/2012</date>
+	<site>http://pluxopolis.net</site>
+	<description><![CDATA[Akismet filters out your comment and track-back spam for you]]></description>
+	<requirements></requirements>
+</document>

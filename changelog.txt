@@ -1,0 +1,12 @@
+## version 1.1.2 (16/04/2012) ##
+BUG Message d'erreur variable $comSelMotif non définit
+Encodage des fichiers en UTF-8 sans BOM
+
+## version 1.1.1 (20/10/2011) ##
+BUG Impossible de poster un commentaire avec l'antispam par défaut de PluXml activé
+
+## version 1.1 (30/09/2011) ##
+BUG Erreur lors de la mise à jour d'un commentaire détecté comme spam
+
+## version 1.0 (28/09/2011) ##
+version initiale
