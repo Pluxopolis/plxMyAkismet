@@ -1,3 +1,6 @@
+## version 1.1.3 (20/05/2015) ##
+BUG fix #1: liste déroulante des actions non présente sur l'écran de gestion des spams (compatibilité PluXml 5.3.x)
+
 ## version 1.1.2 (16/04/2012) ##
 BUG Message d'erreur variable $comSelMotif non définit
 Encodage des fichiers en UTF-8 sans BOM
