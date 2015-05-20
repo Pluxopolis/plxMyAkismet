@@ -1,3 +1,6 @@
+## version 1.2 (20/05/2015) ##
+Compatibilité PluXml 5.4
+
 ## version 1.1.3 (20/05/2015) ##
 BUG fix #1: liste déroulante des actions non présente sur l'écran de gestion des spams (compatibilité PluXml 5.3.x)
 

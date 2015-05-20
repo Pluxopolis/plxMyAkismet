@@ -64,7 +64,7 @@ class plxMyAkismet extends plxPlugin {
 				\$comSelMotif = '/^~[0-9]{4}.(.*).xml$/';
 				\$_SESSION['selCom'] = 'spam';
 				\$nbComPagination=\$plxAdmin->nbComments(\$comSelMotif);
-				echo '<h2>".$this->getLang('SPAM_LIST')."</h2>';
+				\$h2 = '<h2>".$this->getLang('SPAM_LIST')."</h2>';
 			} else {
 				\$comSel = ((isset(\$_SESSION['selCom']) AND !empty(\$_SESSION['selCom'])) ? \$_SESSION['selCom'] : 'all');
 			}
@@ -75,7 +75,7 @@ class plxMyAkismet extends plxPlugin {
 
 	public function AdminCommentsTop() {
 		$string = "
-			\$breadcrumbs[] = '<a '.(\$_SESSION['selCom']=='spam'?'class=\"selected\" ':'').'href=\"comments.php?sel=spam&amp;page=1\">Spam</a>&nbsp;('.\$plxAdmin->nbComments('/~[0-9]{4}.(.*).xml$/').')';
+			\$breadcrumbs[] = '<li><a '.(\$_SESSION['selCom']=='spam'?'class=\"selected\" ':'').'href=\"comments.php?sel=spam&amp;page=1\">Spam</a>&nbsp;('.\$plxAdmin->nbComments('/~[0-9]{4}.(.*).xml$/').')</li>';
 			function selectorSpam(\$id) {
 				ob_start();
 				plxUtils::printSelect('selection[]', array(''=> L_FOR_SELECTION, 'online' => L_COMMENT_SET_ONLINE, 'offline' => L_COMMENT_SET_OFFLINE,  '-'=>'-----','delete' => L_COMMENT_DELETE), '', false,'',\$id);
@@ -83,7 +83,6 @@ class plxMyAkismet extends plxPlugin {
 			}
 			if(\$comSel=='spam') {
 				\$selector1=selectorSpam('id_selection1');
-				\$selector2=selectorSpam('id_selection2');
 			}
 		";
 		echo '<?php '.$string.' ?>';
