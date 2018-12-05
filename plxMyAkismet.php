@@ -78,11 +78,11 @@ class plxMyAkismet extends plxPlugin {
 			\$breadcrumbs[] = '<li><a '.(\$_SESSION['selCom']=='spam'?'class=\"selected\" ':'').'href=\"comments.php?sel=spam&amp;page=1\">Spam</a>&nbsp;('.\$plxAdmin->nbComments('/~[0-9]{4}.(.*).xml$/').')</li>';
 			function selectorSpam(\$id) {
 				ob_start();
-				plxUtils::printSelect('selection[]', array(''=> L_FOR_SELECTION, 'online' => L_COMMENT_SET_ONLINE, 'offline' => L_COMMENT_SET_OFFLINE,  '-'=>'-----','delete' => L_COMMENT_DELETE), '', false,'',\$id);
+				plxUtils::printSelect('selection', array(''=> L_FOR_SELECTION, 'online' => L_COMMENT_SET_ONLINE, 'offline' => L_COMMENT_SET_OFFLINE,  '-'=>'-----','delete' => L_COMMENT_DELETE), '', false,'no-margin',\$id);
 				return ob_get_clean();
 			}
 			if(\$comSel=='spam') {
-				\$selector1=selectorSpam('id_selection1');
+        		\$selector=selectorSpam('id_selection');
 			}
 		";
 		echo '<?php '.$string.' ?>';
